@@ -1,0 +1,200 @@
+//変数////////////////////////////////////
+
+$theme-color: #019bdf;
+$sub-color: #30d0ed;
+$bg-grey: #a3a5a8;
+$bg-grey2: #cccccc;
+$bg-grey3: #f0ebee;
+$bg-black: #706f6f;
+$bg-white: #ffffff;
+$bg-pink: #fff5fe;
+$bg-gradation-black: $bg-black;
+$bg-gradation-white: #9f9ea1;
+$text-main: #413f41;
+$text-white: #fff5fe;
+$text-grey: #5a5a5a;
+
+//共通/////////////////////////////////////
+//マップ型変数breakpointsを定義
+$breakpoints: (
+    //キー　　値
+    "sm": "screen and (max-width: 576px)",
+    "md": "screen and (max-width: 768px)",
+    "lg": "screen and (max-width: 992px)",
+    "xl": "screen and (max-width: 1200px)"
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+    //map-get(マップ型変数, キー)で値を取得
+    @media #{map-get($breakpoints, $breakpoint)} {
+        //この中をカスタムできる
+        @content;
+    }
+}
+
+body {
+    line-height: 1.5;
+    font-family: "NotoSansCJKjp";
+    font-size: 20px;
+    color: $text-main;
+
+    @include mq(md) {
+        font-size: 15px;
+    }
+
+    @include mq(sm) {
+        font-size: 13px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $text-main;
+
+    :hover {
+        opacity: 0.7;
+    }
+}
+
+.container {
+    width: 85%;
+    max-width: 1080px;
+    margin: auto;
+    @include mq(md) {
+        width: 90%;
+    }
+    @include mq(sm) {
+        width: 95%;
+    }
+}
+
+.section{
+    padding: 80px 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+.pc {
+    display: block;
+    @include mq(md) {
+        display: none;
+    }
+}
+.sp {
+    display: none;
+    @include mq(md) {
+        display: block;
+    }
+}
+.btn {
+    color: $text-main;
+    font-size: 16px;
+    line-height: 2;
+    padding: 15px;
+    border-color: $sub-color;
+    border-radius: 12px;
+    outline: none;
+}
+.ta-c {
+    text-align: center;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.wrapper{
+    overflow: hidden;
+}
+
+.d-n {
+    display: none;
+}
+.section-ttl {
+    color: $theme-color;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1;
+}
+.ttl-link {
+    font-size: 14px;
+    &::after {
+        content: ">";
+        padding-left: 16px;
+    }
+}
+.sub-ttl {
+    font-size: 14px;
+    color: $theme-color;
+    font-weight: bold;
+}
+.theme-color-txt {
+    color: $theme-color;
+}
+.sub-color-txt {
+    color: $sub-color;
+}
+.ta-c{
+    text-align: center;
+}
+
+//header////////////////////////////////////
+.header {
+    width: 100%;
+    background-color: $theme-color;
+    top: 0;
+
+    &-inner {
+        height: 200px;
+        width: 100%;
+        align-items: center;
+    }
+    h1{
+        text-align: center;
+        font-weight: bold;
+        font-size: 32px;
+        padding: 30px 0;
+        color: white;
+    }
+}
+
+.quiz-txt{
+    padding-bottom: 80px;
+}
+
+
+.footer {
+    background: linear-gradient($bg-gradation-black, $bg-gradation-white);
+    color: $text-white;
+    text-align: center;
+    padding-top: 40px;
+    @include mq(md) {
+        padding-top: 20px;
+    }
+    a {
+        color: $text-white;
+    }
+
+    &-ttl {
+        font-size: 44px;
+        font-weight: bold;
+        padding: 36px 0;
+        @include mq(md) {
+            font-size: 28px;
+        }
+    }
+
+
+    .copyright {
+        color: $text-white;
+        font-size: 12px;
+        padding-bottom: 30px;
+        @include mq(md) {
+            padding-bottom: 10px;
+        }
+    }
+}

@@ -2,23 +2,43 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>見積もり</title>
+    <title>お水のクイズ</title>
 </head>
 <body>
-    <div class="container">
-        <div id="js-question" class="alert">
-            A sinple primary alert-check it out!
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="tac">
+                オミズ<br>
+                の<br>
+                クイズ
+            </h1>
         </div>
+    </header>
+    <section class="section game_start">
+        <div class="container ta-c">
+            <p>さあ、おみずのクイズに挑戦だ！！</p>
+            <a class="start_btn">挑戦する！</a>
+        </div>
+    </section>
 
-        <div class="fl-wrap">
-            <button type="button" class="btn">aaa</button>
-            <button type="button" class="btn">aaa</button>
-            <button type="button" class="btn">aaa</button>
-            <button type="button" class="btn">aaa</button>
+    <section class="section quiz_wrapper">
+        <div class="container ta-c">
+            <div id="js-question" class="alert quiz-txt">
+                A sinple primary alert-check it out!
+            </div>
+            <div class="fl-wrap">
+                <button type="button" class="btn">aaa</button>
+                <button type="button" class="btn">aaa</button>
+                <button type="button" class="btn">aaa</button>
+                <button type="button" class="btn">aaa</button>
+            </div>
         </div>
-    </div>
+    </section>
+    
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,200 @@
+body {
+  line-height: 1.5;
+  font-family: "NotoSansCJKjp";
+  font-size: 20px;
+  color: #413f41;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #413f41;
+}
+
+a :hover {
+  opacity: 0.7;
+}
+
+.container {
+  width: 85%;
+  max-width: 1080px;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.pc {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sp {
+    display: block;
+  }
+}
+
+.btn {
+  color: #413f41;
+  font-size: 16px;
+  line-height: 2;
+  padding: 15px;
+  border-color: #30d0ed;
+  border-radius: 12px;
+  outline: none;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.d-n {
+  display: none;
+}
+
+.section-ttl {
+  color: #019bdf;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.ttl-link {
+  font-size: 14px;
+}
+
+.ttl-link::after {
+  content: ">";
+  padding-left: 16px;
+}
+
+.sub-ttl {
+  font-size: 14px;
+  color: #019bdf;
+  font-weight: bold;
+}
+
+.theme-color-txt {
+  color: #019bdf;
+}
+
+.sub-color-txt {
+  color: #30d0ed;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  background-color: #019bdf;
+  top: 0;
+}
+
+.header-inner {
+  height: 200px;
+  width: 100%;
+  align-items: center;
+}
+
+.header h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  padding: 30px 0;
+  color: white;
+}
+
+.quiz-txt {
+  padding-bottom: 80px;
+}
+
+.footer {
+  background: linear-gradient(#706f6f, #9f9ea1);
+  color: #fff5fe;
+  text-align: center;
+  padding-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 20px;
+  }
+}
+
+.footer a {
+  color: #fff5fe;
+}
+
+.footer-ttl {
+  font-size: 44px;
+  font-weight: bold;
+  padding: 36px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-ttl {
+    font-size: 28px;
+  }
+}
+
+.footer .copyright {
+  color: #fff5fe;
+  font-size: 12px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .copyright {
+    padding-bottom: 10px;
+  }
+}
