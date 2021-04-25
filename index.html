@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/reset.css">
@@ -8,37 +9,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お水のクイズ</title>
 </head>
-<body>
-    <header class="header">
-        <div class="header-inner">
-            <h1 class="tac">
-                オミズ<br>
-                の<br>
-                クイズ
-            </h1>
-        </div>
-    </header>
-    <section class="section game_start">
-        <div class="container ta-c">
-            <p>さあ、おみずのクイズに挑戦だ！！</p>
-            <a class="start_btn">挑戦する！</a>
-        </div>
-    </section>
 
-    <section class="section quiz_wrapper">
-        <div class="container ta-c">
-            <div id="js-question" class="alert quiz-txt">
-                A sinple primary alert-check it out!
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="header-inner">
+                <h1 class="tac">
+                    オミズのクイズ
+                </h1>
             </div>
-            <div class="fl-wrap">
-                <button type="button" class="btn">aaa</button>
-                <button type="button" class="btn">aaa</button>
-                <button type="button" class="btn">aaa</button>
-                <button type="button" class="btn">aaa</button>
+        </header>
+        <section class="section mv">
+            <div class="container ta-c">
+                <p>さあ、おみずのクイズに挑戦だ！！</p>
+                <a id="quiz-btn" class="start_btn">挑戦する！</a>
             </div>
-        </div>
-    </section>
-    
+        </section>
+
+        <section id="quiz" class="section quiz">
+            <div class="container ta-c">
+                <div id="js-question" class="alert quiz-txt">
+                    A sinple primary alert-check it out!
+                </div>
+                <div class="fl-wrap">
+                    <button type="button" class="btn">aaa</button>
+                    <button type="button" class="btn">aaa</button>
+                    <button type="button" class="btn">aaa</button>
+                    <button type="button" class="btn">aaa</button>
+                </div>
+            </div>
+
+            <div class="reset">
+                <span id="reset" class="reset-btn">
+                    スタート画面に戻る
+                </span>
+                
+            </div>
+        </section>
+        
+    </div>
     <script src="app.js"></script>
 </body>
+
 </html>

@@ -107,18 +107,22 @@ a {
     justify-content: space-between;
 }
 
-.wrapper{
+.wrap{
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
 }
 
 .d-n {
     display: none;
 }
-.section-ttl {
-    color: $theme-color;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1;
+.slidein{
+    transform: translateY(-100%);
+    transition: 1.5s;
+}
+.slideout{
+    transform: translateY(0%);
+    transition: 1.5s;
 }
 .ttl-link {
     font-size: 14px;
@@ -127,17 +131,7 @@ a {
         padding-left: 16px;
     }
 }
-.sub-ttl {
-    font-size: 14px;
-    color: $theme-color;
-    font-weight: bold;
-}
-.theme-color-txt {
-    color: $theme-color;
-}
-.sub-color-txt {
-    color: $sub-color;
-}
+
 .ta-c{
     text-align: center;
 }
@@ -147,9 +141,9 @@ a {
     width: 100%;
     background-color: $theme-color;
     top: 0;
-
+    position: fixed;
+    z-index: 101;
     &-inner {
-        height: 200px;
         width: 100%;
         align-items: center;
     }
@@ -160,41 +154,56 @@ a {
         padding: 30px 0;
         color: white;
     }
-}
-
-.quiz-txt{
-    padding-bottom: 80px;
+    
 }
 
 
-.footer {
-    background: linear-gradient($bg-gradation-black, $bg-gradation-white);
-    color: $text-white;
-    text-align: center;
-    padding-top: 40px;
-    @include mq(md) {
-        padding-top: 20px;
-    }
-    a {
-        color: $text-white;
-    }
 
-    &-ttl {
-        font-size: 44px;
+.mv{
+    height: 100vh;
+    background: url(../img/IMG_0523.JPG) no-repeat;
+    background-size: cover;
+    p{
+        margin-top: 35%;
         font-weight: bold;
-        padding: 36px 0;
-        @include mq(md) {
-            font-size: 28px;
-        }
-    }
-
-
-    .copyright {
         color: $text-white;
-        font-size: 12px;
-        padding-bottom: 30px;
-        @include mq(md) {
-            padding-bottom: 10px;
+    }
+    .start_btn{
+        display: block;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid #019bdf;
+        border-radius: 50%;
+        font-weight: bold;
+        margin: 80px auto;
+        padding: 20px 0;
+        width: 200px;
+        
+    }
+}
+
+.quiz{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 100;
+    &-txt{
+        margin-top: 30%;
+    }
+    .fl-wrap{
+        margin-top: 60px;
+    }
+    .reset{
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        &-btn{
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
         }
+        
     }
 }

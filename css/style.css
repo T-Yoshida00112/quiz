@@ -92,7 +92,9 @@ a :hover {
   justify-content: space-between;
 }
 
-.wrapper {
+.wrap {
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -100,11 +102,14 @@ a :hover {
   display: none;
 }
 
-.section-ttl {
-  color: #019bdf;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1;
+.slidein {
+  transform: translateY(-100%);
+  transition: 1.5s;
+}
+
+.slideout {
+  transform: translateY(0%);
+  transition: 1.5s;
 }
 
 .ttl-link {
@@ -116,20 +121,6 @@ a :hover {
   padding-left: 16px;
 }
 
-.sub-ttl {
-  font-size: 14px;
-  color: #019bdf;
-  font-weight: bold;
-}
-
-.theme-color-txt {
-  color: #019bdf;
-}
-
-.sub-color-txt {
-  color: #30d0ed;
-}
-
 .ta-c {
   text-align: center;
 }
@@ -138,10 +129,11 @@ a :hover {
   width: 100%;
   background-color: #019bdf;
   top: 0;
+  position: fixed;
+  z-index: 101;
 }
 
 .header-inner {
-  height: 200px;
   width: 100%;
   align-items: center;
 }
@@ -154,47 +146,56 @@ a :hover {
   color: white;
 }
 
-.quiz-txt {
-  padding-bottom: 80px;
+.mv {
+  height: 100vh;
+  background: url(../img/IMG_0523.JPG) no-repeat;
+  background-size: cover;
 }
 
-.footer {
-  background: linear-gradient(#706f6f, #9f9ea1);
-  color: #fff5fe;
-  text-align: center;
-  padding-top: 40px;
-}
-
-@media screen and (max-width: 768px) {
-  .footer {
-    padding-top: 20px;
-  }
-}
-
-.footer a {
-  color: #fff5fe;
-}
-
-.footer-ttl {
-  font-size: 44px;
+.mv p {
+  margin-top: 35%;
   font-weight: bold;
-  padding: 36px 0;
-}
-
-@media screen and (max-width: 768px) {
-  .footer-ttl {
-    font-size: 28px;
-  }
-}
-
-.footer .copyright {
   color: #fff5fe;
-  font-size: 12px;
-  padding-bottom: 30px;
 }
 
-@media screen and (max-width: 768px) {
-  .footer .copyright {
-    padding-bottom: 10px;
-  }
+.mv .start_btn {
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #019bdf;
+  border-radius: 50%;
+  font-weight: bold;
+  margin: 80px auto;
+  padding: 20px 0;
+  width: 200px;
+}
+
+.quiz {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 100;
+}
+
+.quiz-txt {
+  margin-top: 30%;
+}
+
+.quiz .fl-wrap {
+  margin-top: 60px;
+}
+
+.quiz .reset {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.quiz .reset-btn {
+  cursor: pointer;
+}
+
+.quiz .reset-btn:hover {
+  text-decoration: underline;
 }
