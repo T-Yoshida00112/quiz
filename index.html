@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お水のクイズ</title>
+    <title>広島県のクイズ</title>
 </head>
 
 <body>
@@ -15,13 +15,13 @@
         <header class="header">
             <div class="header-inner">
                 <h1 class="tac">
-                    オミズのクイズ
+                    広島県のクイズ
                 </h1>
             </div>
         </header>
         <section class="section mv">
             <div class="container ta-c">
-                <p>さあ、おみずのクイズに挑戦だ！！</p>
+                <p>さあ、広島県のクイズに挑戦だ！！</p>
                 <a id="quiz-btn" class="start_btn">挑戦する！</a>
             </div>
         </section>
@@ -45,6 +45,22 @@
                 </span>
                 
             </div>
+        </section>
+        <section id="result" class="result">
+            <div class="container">
+                <p class="result-txt">
+                    あなたの点数は、
+                    <span id="q_len" class="score"></span>点満点中の
+                    <span id="score" class="score"></span>点
+                </p>
+                <div class="btn-wrapper">
+                    <span id="restart" class="restart-btn">
+                        もう一度やる！
+                    </span>
+                </div>
+                
+            </div>
+            
         </section>
         
     </div>

@@ -130,7 +130,7 @@ a :hover {
   background-color: #019bdf;
   top: 0;
   position: fixed;
-  z-index: 101;
+  z-index: 102;
 }
 
 .header-inner {
@@ -198,4 +198,37 @@ a :hover {
 
 .quiz .reset-btn:hover {
   text-decoration: underline;
+}
+
+.result {
+  height: 100vh;
+  width: 100%;
+  background-color: #353434;
+  color: #fff5fe;
+  position: fixed;
+  z-index: 101;
+  text-align: center;
+}
+
+.result-txt {
+  margin-top: 30%;
+}
+
+.result .btn-wrapper {
+  padding-top: 40px;
+}
+
+.result .restart-btn {
+  cursor: pointer;
+  background-color: #019bdf;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.result .score {
+  padding: 0 15px;
+  color: #019bdf;
+  font-weight: bold;
+  transform: scale(1.2);
+  transition: 1s;
 }

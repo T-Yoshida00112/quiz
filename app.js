@@ -2,6 +2,8 @@
 const $startBtn = document.getElementById('quiz-btn');
 $startBtn.addEventListener('click', (e) => {
     document.getElementById("quiz").classList.add("slidein");
+    document.getElementById("result").classList.remove("slidein");
+    document.getElementById("result").classList.remove("slideout");
     document.getElementById("quiz").classList.remove("slideout");
     setupQuiz();
     return false;
@@ -15,37 +17,48 @@ $resetBtn.addEventListener('click', (e) => {
     resetQuiz();
     return false;
 });
+
+const $restartBtn = document.getElementById('restart');
+$restartBtn.addEventListener('click', (e) => {
+    document.getElementById("quiz").classList.add("slideout");
+    document.getElementById("quiz").classList.remove("slidein");
+    document.getElementById("result").classList.add("slideout");
+    document.getElementById("result").classList.remove("slidein");
+    
+    resetQuiz();
+    return false;
+});
 //クイズの内容
 
 const quiz = [{
-        question: 'このクイズはなんのクイズ？',
+        question: '広島県の特産物はどれ？',
         answers: [
             'ボルビック',
             'クリスタルガイザー',
-            '水',
-            'おみず'
+            '牡蠣',
+            'いろはす'
         ],
-        correct: 'おみず'
+        correct: '牡蠣'
     },
     {
-        question: '水の化学式は？',
+        question: '世界トップシェアを持つ筆の産地の名前は？',
         answers: [
-            'H₂O',
-            'CO₂',
-            'プラスチック',
-            '目覚まし時計'
+            '札幌',
+            'サン・フランシスコ',
+            '熊野',
+            'カイロ'
         ],
-        correct: 'H₂O'
+        correct: '熊野'
     },
     {
-        question: '水が凍ると何になる？',
+        question: 'もみじ饅頭を作っている会社は？',
         answers: [
-            'おにぎり',
-            '小売',
-            'いろはす',
-            '氷'
+            'にしき堂',
+            '松屋',
+            'すき屋',
+            '吉野家'
         ],
-        correct: '氷'
+        correct: 'にしき堂'
     }
 ];
 
@@ -89,7 +102,9 @@ const clickHandler = (e) => {
         setupQuiz();
     } else {
         //問題数がもうないときの処理
-        window.alert('終了!あなたの正解数は' + score + '/' + quizLength + 'です！');
+        document.getElementById("result").classList.add("slidein");
+        document.getElementById("q_len").innerHTML = quizLength;
+        document.getElementById("score").innerHTML = score;
         quizIndex = 0;
     }
 }
